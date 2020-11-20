@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import TweetEmbed from "react-tweet-embed";
+
 import "./App.css";
 import { TaxInput } from "./TaxInput";
 
@@ -70,8 +72,9 @@ function App() {
         ))}
       </div>
       <button onClick={addRow} className={"addRow"}>
-        +
+        More Taxes!
       </button>
+      <TweetEmbed id="1165103744456937473" className={"tweetEmbed"} />
     </div>
   );
 }
