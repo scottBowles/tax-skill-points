@@ -1,4 +1,5 @@
 import React from "react";
+import { BsTrash } from "react-icons/bs";
 
 interface Props {
   name: string;
@@ -7,6 +8,7 @@ interface Props {
   incrementPoints: (index: number) => void;
   decrementPoints: (index: number) => void;
   changeName: (index: number, name: string) => void;
+  removeTax: (index: number) => void;
 }
 
 export function TaxInput({
@@ -16,16 +18,23 @@ export function TaxInput({
   incrementPoints,
   decrementPoints,
   changeName,
+  removeTax,
 }: Props) {
   return (
-    <div>
+    <>
       <input
         onChange={(event) => changeName(index, event.target.value)}
         value={name}
-      ></input>
-      <button onClick={() => incrementPoints(index)}>+</button>
-      <button onClick={() => decrementPoints(index)}>-</button>
-      <span>{points}</span>
-    </div>
+        className={"taxName"}
+      />
+      <button onClick={() => incrementPoints(index)} className={"increment"}>
+        +
+      </button>
+      <button onClick={() => decrementPoints(index)} className={"decrement"}>
+        -
+      </button>
+      <span className={"points"}>{points}</span>
+      <BsTrash className={"delete"} onClick={() => removeTax(index)} />
+    </>
   );
 }

@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+#container {
+  display: grid;
+  grid-template-columns: auto 20px 20px 20px 20px;
+  justify-content: center;
+  gap: 3px 3px;
+}
+
+.taxName {
+}
+
+.increment {
+  justify-self: center;
+  align-self: center;
+}
+
+.decrement {
+  justify-self: center;
+  align-self: center;
+}
+
+.points {
+  justify-self: center;
+  align-self: center;
+}
+
+.delete {
+  justify-self: center;
+  align-self: center;
+}
+
+.addRow {
+  margin-top: 5px;
+}
